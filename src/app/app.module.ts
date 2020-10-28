@@ -1,3 +1,4 @@
+import { ShoppingListService } from './shopping/shopping-list.service';
 import { DropDownDirective } from './shared/dropdown.directive/dropdown.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -30,7 +31,7 @@ import { RecipesComponent } from './recipes/recipes.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
