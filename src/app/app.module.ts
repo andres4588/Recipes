@@ -3,6 +3,9 @@ import { DropDownDirective } from './shared/dropdown.directive/dropdown.directiv
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+
 
 import { AppComponent } from './app.component';
 import {ShoppingListComponent} from './shopping/shopping-list.component';
@@ -12,6 +15,10 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
+import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
+
 
 
 
@@ -25,11 +32,15 @@ import { RecipesComponent } from './recipes/recipes.component';
     RecipeDetailComponent,
     HeaderComponent,
     RecipesComponent,
-    DropDownDirective
+    DropDownDirective,
+    RecipesStartComponent,
+    RecipesEditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
+
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
